@@ -1,0 +1,21 @@
+<!-- /client/views/teams.html -->
+
+<template name = "teams">
+  <h3>Teams</h3>
+  {{#if creating}}
+  <form class="form-create">
+	<input name="name" type="text">
+	<button type="submit">Submit</button>
+	<a class="create" href="#">Create</a>
+  </form>
+  {{else}}
+  <a class="create" href="#">Create</a>
+  {{/if}}
+
+  
+  <ul>
+	{{#each teams}}
+	  {{> team}}
+	{{/each}}
+  </ul>
+</template>
